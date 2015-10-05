@@ -1,0 +1,4 @@
+#!/bin/sh
+
+s3cmd -c ~/.s3cfg-me put bienvenidos-a.miami/* s3://bienvenidos-a.miami/
+s3cmd -c ~/.s3cfg-me put welcome-to.miami/* s3://welcome-to.miami/

@@ -1,0 +1,35 @@
+<html>
+<head>
+<style>
+video#bgvid { 
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    background-size: cover; 
+}
+</style>
+</head>
+<body>
+
+<video autoplay id="bgvid">
+    <source src="bienvenidos.webm" type="video/webm">
+    <source src="bienvenidos.mp4" type="video/mp4">
+</video>
+
+<script type='text/javascript'>
+    document.getElementById('bgvid').addEventListener('ended',redirectHandler,false);
+    function redirectHandler(e) {
+        window.location.replace("http://welcome-to.miami");
+    }
+</script>
+
+</body>
+<html>
+
