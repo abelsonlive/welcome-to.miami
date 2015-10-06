@@ -26,9 +26,15 @@ video#bgvid {
 <script type='text/javascript'>
     document.getElementById('bgvid').addEventListener('ended',redirectHandler,false);
     function redirectHandler(e) {
-        window.open("http://welcome-to.miami");
-        window.location.replace("http://welcome-to.miami");
+        var url = window.location.href;
+        if  (url.indexOf('basel') > 0) {
+            window.open('http://welcome-to.miami?basel=true')
+            window.location.replace("http://welcome-to.miami?basel=true");
+        } else {
+            window.location.replace("http://welcome-to.miami");
+        }
     }
+        
 </script>
 
 </body>
